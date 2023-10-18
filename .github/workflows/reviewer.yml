@@ -1,7 +1,7 @@
 name: Review Assign
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, ready_for_review]
 
 jobs:
@@ -10,6 +10,5 @@ jobs:
     steps:
       - uses: hkusu/review-assign-action@v1
         with:
-          reviewers: bnoieh, welkin22, owen-reorg, bendanzhentan, redhdx, krish-nr, xuan-cu, andyzhang2023
+          reviewers: ${{ vars.REVIEWERS }}
           max-num-of-reviewers: 2
-          github-token: ${{ secrets.GITHUB_TOKEN }}
