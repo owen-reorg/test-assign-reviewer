@@ -12,3 +12,4 @@ jobs:
         with:
           reviewers: bnoieh, welkin22, owen-reorg, bendanzhentan, redhdx, krish-nr, xuan-cu, andyzhang2023
           max-num-of-reviewers: 2
+          github-token: ${{ secrets.GITHUB_TOKEN }}
